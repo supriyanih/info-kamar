@@ -1,0 +1,24 @@
+{
+    "name": "supriyanih/info-kamar",
+    "description": "Data Info Kamar Rawat Inap",
+    "authors": [
+        {
+            "name": "supriyanih",
+            "email": "supriyanih@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": "5.4.*",
+        "laravelcollective/html":"^5.4.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers/helpers.php"
+        ],
+        "psr-4": {
+            "Supriyanih\\InfoKamar\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
