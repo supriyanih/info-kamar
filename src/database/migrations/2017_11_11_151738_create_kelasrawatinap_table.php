@@ -17,6 +17,7 @@ class CreateKelasrawatinapTable extends Migration
             $table->increments('id');
             $table->string('kode_kelas',50);
             $table->string('nama_kelas',60);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

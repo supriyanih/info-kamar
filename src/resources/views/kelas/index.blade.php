@@ -1,7 +1,7 @@
 
 
 <h1>Kelas Rawat Inap</h1>
-  <h3> <a href="{{ url('demo')}}" class="btn btn-default btn-sm">Kembali &raquo;</a></h3>
+  <h3> <a href="{{ url('demo')}}" class="btn btn-default btn-sm">&laquo; Kembali </a></h3>
     <h3> <a href="{{ route('kelas.create')}}" class="btn btn-default btn-sm">Tambah &raquo;</a></h3>
    <div class="table-responsive">
     <table class="table table-striped  b-t">

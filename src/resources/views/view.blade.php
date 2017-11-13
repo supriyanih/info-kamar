@@ -7,19 +7,23 @@
 <table>
   <thead>
     <tr>
+      <th>Kelas </th>
+      <th>Ruangan</th>
       <th>Kode Tempat Tidur</th>
       <th>Status</th>
-      <th>Ruangan</th>
-      <th>Kelas </th>
+
+
     </tr>
   </thead>
   <tbody>
     @foreach ($bed as $tt)
       <tr>
+        <td>{{$tt->ranjang->kelas->nama_kelas}}</td>
+        <td>{{$tt->ranjang->nama_ruang}}</td>
         <td>{{$tt->kode_bed}}</td>
         <td>{{$tt->status}}</td>
-        <td>{{$tt->ranjang->nama_ruang}}</td>
-        <td>{{$tt->ranjang->kelas->nama_kelas}}</td>
+
+
       </tr>
     @endforeach
 

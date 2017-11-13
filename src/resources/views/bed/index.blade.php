@@ -1,7 +1,7 @@
 
 
 <h1>Data Tempat Tidur</h1>
-<h4> <a href="{{ url('demo')}}" class="btn btn-default btn-sm">Kembali &raquo;</a></h4>
+<h4> <a href="{{ url('demo')}}" class="btn btn-default btn-sm">&laquo; Kembali </a></h4>
     <h3> <a href="{{ route('bed.create')}}" class="btn btn-default btn-sm">Tambah &raquo;</a></h3>
    <div class="table-responsive">
     <table class="table table-striped  b-t">

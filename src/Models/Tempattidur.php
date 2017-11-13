@@ -1,7 +1,7 @@
 <?php namespace Supriyanih\InfoKamar\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * The InfoKamarModel class.
  *
@@ -15,6 +15,7 @@ class Tempattidur extends Model
     *
     * @var string
     */
+    use SoftDeletes;
     protected $table = 'tempat_tidur';
 
     /**
@@ -29,7 +30,7 @@ class Tempattidur extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['deleted_at'];
 
 
     public function ranjang()

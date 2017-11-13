@@ -19,6 +19,7 @@ class CreateTempattidurTable extends Migration
             $table->foreign('ruang_id')->references('id')->on('ruang_rawat_inap')->onDelete('cascade');
             $table->string('kode_bed');
             $table->integer('status');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

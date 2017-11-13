@@ -16,7 +16,7 @@ class InfoKamarController extends Controller
     public function demo()
     {
 
-      $bed = Tempattidur::with('ranjang.kelas')->get();
+      $bed = Tempattidur::with('ranjang.kelas')->whereNull('deleted_at')->get();
         return view('info-kamar::view', compact('bed'));
     }
 }

@@ -1,6 +1,7 @@
 <?php namespace Supriyanih\InfoKamar\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * The InfoKamarModel class.
@@ -15,6 +16,7 @@ class Kelasrawat extends Model
     *
     * @var string
     */
+    use SoftDeletes;
     protected $table = 'kelas_rawat_inap';
 
     /**
@@ -29,11 +31,21 @@ class Kelasrawat extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = ['deleted_at'];
 
+    protected static function boot()
+        {
+          parent::boot();
+
+          static::deleting(function($kelas_rawat_inap) {
+             foreach ($kelas_rawat_inap->kelas()->get() as $kls) {
+                $kls->delete();
+             }
+          });
+        }
 
      public function kelas()
     {
-      return  $this->hasMany('Supriyanih\InfoKamar\Models\Ruangrawat');
+      return  $this->hasMany('Supriyanih\InfoKamar\Models\Ruangrawat','id');
     }
 }
